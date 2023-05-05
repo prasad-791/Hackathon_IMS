@@ -1,0 +1,678 @@
+{
+	"info": {
+		"_postman_id": "e5029423-6b46-4c87-b15e-177a6bcf3e0f",
+		"name": "Hackathon IMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\",\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/user/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sports\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/category/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"category",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/category/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"category",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/category?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"category"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3MjMzNCwiZXhwIjoxNjgzMjczNzc0fQ.05pFHtPD2GixsBR3Au2cSQwnLbw1fW45ucv7dR379ik",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/category/delete?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"category",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Furniture\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/category/update?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"category",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Add Asset",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Football\",\r\n    \"quantity\":20,\r\n    \"receivedDate\":\"2023-05-05\",\r\n    \"locationOfStorage\":\"College\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/asset/add?categoryID=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"asset",
+								"add"
+							],
+							"query": [
+								{
+									"key": "categoryID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Asset",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/asset/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"asset",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Asset For Category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI4MDI2MCwiZXhwIjoxNjgzMjgxNzAwfQ.dH-48YBQFH0Y2FEfdH1cbABf3Nxe20aTmg_VrU81EyA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/asset?categoryID=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"asset"
+							],
+							"query": [
+								{
+									"key": "categoryID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Asset for Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/asset/deleteAll?categoryID=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"asset",
+								"deleteAll"
+							],
+							"query": [
+								{
+									"key": "categoryID",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Asset",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"VolleyBall\",\r\n    \"quantity\":12,\r\n    \"receivedDate\":\"2023-03-05\",\r\n    \"locationOfStorage\": \"School\",\r\n    \"categoryID\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/asset/update?id=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"asset",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrow",
+			"item": [
+				{
+					"name": "Add Borrow Details",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantityBorrowed\": 15,\r\n    \"borrowingDate\": \"2023-05-05\",\r\n    \"returnDate\": \"2023-05-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/borrow/add?assetID=3&userID=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"borrow",
+								"add"
+							],
+							"query": [
+								{
+									"key": "assetID",
+									"value": "3"
+								},
+								{
+									"key": "userID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Borrow Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/borrow/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"borrow",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Borrow Details for ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI3OTk3MCwiZXhwIjoxNjgzMjgxNDEwfQ.9BFpL4ALEy1RWdrQhb6J6-POyqaxso6f85PDrDYJuZM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/borrow?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"borrow"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Borrow Details for ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/borrow/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"borrow",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Borrow Details For ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY4MzI4MDI2MCwiZXhwIjoxNjgzMjgxNzAwfQ.dH-48YBQFH0Y2FEfdH1cbABf3Nxe20aTmg_VrU81EyA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantityBorrowed\": 10,\r\n    \"borrowingDate\": \"2023-05-07\",\r\n    \"returnDate\": \"2023-05-09\",\r\n    \"assetID\": 1,\r\n    \"userID\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8927/ims/api/v1/borrow/edit?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8927",
+							"path": [
+								"ims",
+								"api",
+								"v1",
+								"borrow",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
